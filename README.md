@@ -32,7 +32,6 @@ Premium single-page personal brand site for Devin Thomas, known as Lil Gohan. Th
 │  ├─ hooks/
 │  ├─ lib/
 │  └─ styles/
-├─ .github/workflows/deploy.yml
 ├─ PLAN.md
 ├─ index.html
 ├─ package.json
@@ -69,20 +68,35 @@ npm run build
 
 The output is generated in `dist/`.
 
+Create the committed GitHub Pages build:
+
+```bash
+npm run build:pages
+```
+
+That output is generated in `docs/`.
+
 ## GitHub Pages Deployment
 
-This repo is configured for GitHub Pages using GitHub Actions and the `main` branch.
+This repo is configured for GitHub Pages using branch publishing from `main` and the `/docs` folder.
 
-1. Push the project to GitHub on the `main` branch.
-2. In the GitHub repository, open `Settings > Pages`.
-3. Under `Build and deployment`, set `Source` to `GitHub Actions`.
-4. Push to `main` or manually run the `Deploy to GitHub Pages` workflow from the Actions tab.
-5. GitHub will publish the `dist/` artifact produced by the workflow.
+1. Run the Pages build:
+
+```bash
+npm run build:pages
+```
+
+2. Commit the updated `docs/` output.
+3. Push to `main`.
+4. In the GitHub repository, open `Settings > Pages`.
+5. Under `Build and deployment`, set `Source` to `Deploy from a branch`.
+6. Set `Branch` to `main` and `Folder` to `/docs`.
+7. GitHub will publish directly from the committed `docs/` output.
 
 Notes:
 
-- `vite.config.ts` uses `base: "./"` so the build works cleanly on GitHub Pages project sites.
-- No router is used, so no extra SPA rewrite setup is needed.
+- `vite.config.ts` uses `base: "./"` so the build works correctly on GitHub Pages project sites.
+- No router is used, so no extra SPA rewrite setup is required.
 
 ## Customizing Content
 
