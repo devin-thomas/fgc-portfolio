@@ -1,0 +1,11 @@
+node_modules/
+dist/
+
+# Raw source packs are kept locally and are too large for the website repo.
+beginning assets/
+
+.DS_Store
+Thumbs.db
+
+.vite/
+*.log

@@ -1,0 +1,66 @@
+:root {
+  color-scheme: dark;
+  --font-display: "Sora", ui-sans-serif, system-ui, sans-serif;
+  --font-condensed: "Barlow Condensed", "Arial Narrow", sans-serif;
+  --color-bg: #090b0f;
+  --color-bg-soft: #12161d;
+  --color-surface: rgba(18, 23, 31, 0.84);
+  --color-surface-strong: rgba(23, 29, 39, 0.95);
+  --color-ink: #f4efe4;
+  --color-muted: #cabfad;
+  --color-soft: #9f9789;
+  --color-line: rgba(244, 239, 228, 0.12);
+  --color-line-strong: rgba(244, 239, 228, 0.22);
+  --color-accent: #66dde7;
+  --color-accent-soft: rgba(102, 221, 231, 0.16);
+  --color-warm: #b68955;
+  --color-glow: #d17af2;
+  --shadow-panel: 0 30px 80px rgba(0, 0, 0, 0.42);
+  --shadow-subtle: 0 20px 48px rgba(0, 0, 0, 0.24);
+  --page-gradient:
+    radial-gradient(circle at top left, rgba(209, 122, 242, 0.12), transparent 24%),
+    radial-gradient(circle at top right, rgba(102, 221, 231, 0.14), transparent 28%),
+    linear-gradient(180deg, #090b0f 0%, #0c0f14 36%, #0a0d12 100%);
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+  --color-bg: #f4efe5;
+  --color-bg-soft: #e7dfd1;
+  --color-surface: rgba(255, 252, 246, 0.84);
+  --color-surface-strong: rgba(249, 244, 235, 0.94);
+  --color-ink: #17130e;
+  --color-muted: #574c3f;
+  --color-soft: #6f6355;
+  --color-line: rgba(23, 19, 14, 0.12);
+  --color-line-strong: rgba(23, 19, 14, 0.18);
+  --color-accent: #167c89;
+  --color-accent-soft: rgba(22, 124, 137, 0.12);
+  --color-warm: #9a6b36;
+  --color-glow: #9354c0;
+  --shadow-panel: 0 24px 64px rgba(29, 22, 12, 0.12);
+  --shadow-subtle: 0 16px 40px rgba(29, 22, 12, 0.08);
+  --page-gradient:
+    radial-gradient(circle at top left, rgba(147, 84, 192, 0.08), transparent 24%),
+    radial-gradient(circle at top right, rgba(22, 124, 137, 0.12), transparent 28%),
+    linear-gradient(180deg, #f4efe5 0%, #eee7da 40%, #f7f2e8 100%);
+}
+
+@theme inline {
+  --font-sans: var(--font-display);
+  --font-display: var(--font-display);
+  --font-condensed: var(--font-condensed);
+  --color-bg: var(--color-bg);
+  --color-bg-soft: var(--color-bg-soft);
+  --color-surface: var(--color-surface);
+  --color-surface-strong: var(--color-surface-strong);
+  --color-ink: var(--color-ink);
+  --color-muted: var(--color-muted);
+  --color-soft: var(--color-soft);
+  --color-line: var(--color-line);
+  --color-line-strong: var(--color-line-strong);
+  --color-accent: var(--color-accent);
+  --color-accent-soft: var(--color-accent-soft);
+  --color-warm: var(--color-warm);
+  --color-glow: var(--color-glow);
+}

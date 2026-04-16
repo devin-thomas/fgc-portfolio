@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <script>
+      (() => {
+        const stored = localStorage.getItem("lilgohan-theme");
+        const systemPrefersLight =
+          window.matchMedia &&
+          window.matchMedia("(prefers-color-scheme: light)").matches;
+        const theme = stored === "light" || stored === "dark"
+          ? stored
+          : systemPrefersLight
+            ? "light"
+            : "dark";
+        document.documentElement.dataset.theme = theme;
+      })();
+    </script>
+    <title>Devin Thomas | Lil Gohan</title>
+    <meta
+      name="description"
+      content="Premium personal brand site for Devin Thomas, known as Lil Gohan — a polished fighting game commentator and media presence focused on 2XKO."
+    />
+    <meta name="theme-color" content="#090b0f" />
+    <meta name="color-scheme" content="dark light" />
+    <meta property="og:title" content="Devin Thomas | Lil Gohan" />
+    <meta
+      property="og:description"
+      content="Sharp commentary, polished presentation, and a serious public-facing brand built for the next era of 2XKO."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="./media/og/og-image.jpg" />
+    <meta
+      property="og:image:alt"
+      content="Portrait of Devin Thomas, known as Lil Gohan."
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:creator" content="@Gohan__FGC" />
+    <link rel="icon" type="image/svg+xml" href="./favicon/favicon.svg" />
+    <link rel="manifest" href="./site.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&family=Sora:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
